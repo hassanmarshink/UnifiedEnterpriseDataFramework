@@ -1,0 +1,40 @@
+{
+  "name": "data-migration-sf-pg",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": {
+    "type": "git",
+    "url": "<Add your repository here>"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/postgres": "^1.4.1",
+    "@sap/cds": "^7",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "axios": "^1.6.7",
+    "better-sqlite3": "^9.5.0",
+    "dotenv": "^16.4.1",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "sqlite3": "^5.1.7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "postgres"
+      },
+      "metadata": {
+        "kind": "odata-v2",
+        "model": "srv/external/metadata"
+      }
+    }
+  },
+  "main": "import.js",
+  "author": ""
+}
